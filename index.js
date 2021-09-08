@@ -17,9 +17,16 @@ connection.connect(function(err) {
     }
 });
 
-app.get('/' , function(req, res){
-    res.send("HOLA")
-})
+$query = 'SELECT * FROM users';
+
+connection.query($query, function(err, rows, fields) {
+    if(err){
+        console.log("An error ocurred performing the query.");
+        return;
+    }
+
+    console.log("Consulta ejecutada con éxito:", rows);
+});
 
 app.listen(4500, () => {
     console.log(`Example app listening at http://localhost:4500`)
