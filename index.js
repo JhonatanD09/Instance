@@ -5,11 +5,11 @@ const mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : '123',
+    password : '2021SlFj09',
     database : 'test'
 });
-
 connection.connect(function(err) {
+
     // en caso de error
     if(err){
         console.log(err.code);
